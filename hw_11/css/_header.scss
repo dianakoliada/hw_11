@@ -1,28 +1,133 @@
 $headerMainColor: White;
 
-/*for mobile 375*/
+/*1920*/
 header {
-    background-image: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+    background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+    background-size: 100% 100% contain;
     z-index: 99;
+    padding-top: 90px;
     
     .wrap {
         background: url(../imgs/header/symbol.png) no-repeat;
-        background-position: center top;
-        background-attachment: fixed;
+        background-position: center top; /*растянуть символ наверх!!!*/
         z-index: 999;
         display: flex;
         flex-direction: column;
         align-items: center;
-        
-        
+
         .header__block {
-            width: $Size +79;
-            outline: 2px solid white;
+            outline: 2px solid yellow;
+            width: $Size *90;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            
+
+            .header__name {
+                color: $headerMainColor;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: $primarySize;
+                letter-spacing: $primarySize - 5;
+                line-height: $primarySize +5;
+            }
+
+            .header__navigation {
+                outline: 2px solid white;
+                width: $Size*40;
+
+                .header__nav {
+                    display: flex;
+                    justify-content: flex-end;
+
+                    .nav {
+                        width: $Size*20;
+
+                        .nav__lang {
+                            outline: 2px solid white;
+                            display: flex;
+                            justify-content: flex-end;
+                            
+                            .lang__item {
+                                color: $headerMainColor;
+                                font-weight: 700;
+                                font-size: $mainSize -0.3;
+                                letter-spacing: $primarySize -9;
+                                margin-right: 10%; /*отступы между лишками*/
+                                line-height: $primarySize +13;
+                            }
+    
+                            #special {
+                                display: block;
+                                line-height: $primarySize +13;
+                                text-align: center;
+                                background-color: #F0145A;
+                                width: $primarySize +23;
+                                height: $primarySize +15;
+                                border-radius: $primarySize - 2;
+                            }
+                        }      
+                    }
+
+                    .nav__contacts {
+                        outline: 2px solid azure;
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        width: $Size*60;
+
+                        .dot__separator {
+                            width: $primarySize - 4;
+                            height: $primarySize - 4;
+                            border-radius: $Size*50;
+                            background-color: #E6E6F0;
+                        }
+
+                        .nav__title {
+                            color: $headerMainColor;
+                            font-size: $primarySize +6;
+                            line-height: $primarySize *2;
+                        }
+
+                        .nav__title--strong {
+                            text-decoration: none;
+                            font-weight: 700;
+                        }
+                    }    
+                }
+
+                .menu {
+                    outline: 2px solid lime;
+                    
+                    padding-top: $Size*2;
+                    display: flex;
+                    
+                    .menu__picture {
+                        display: none; /*для моб версии*/
+                    }
+                    
+                    .menu__list {
+                        display: flex;
+                        justify-content: flex-end;
+                        width: $Size*100;
+                        
+                        .menu__item {
+                            margin-left: $Size*5;
+
+                            .menu__link {
+                                outline: 2px solid rgb(154, 159, 154);
+                                color: $headerMainColor;
+                                font-weight: 700;
+                                font-size: $primarySize +6;
+                                line-height: $primarySize *2;
+                                text-decoration: none;
+
+                            }
+                        }
+                    }
+                }
+            }
         }
+        
 
 
     }

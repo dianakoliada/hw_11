@@ -12,6 +12,9 @@ $mainSize: 1rem;
 @import 'header';
 @import 'footer';
 
-.wrapper {
-    margin: 0 auto;
+body {
+    font-family: 'Montserrat', sans-serif;
+
+    .wrapper {
+    }
 }

@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css"> <!--проверить правильнось названия-->
-    <link rel="stylesheet" href="css/main.css"> <!--проверить правильнось названия-->
+    <link rel="stylesheet" href="css/reset.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@1,300&family=Dancing+Script&family=Hind+Siliguri&family=Montserrat& family=Open+Sans&family=PT+Sans&family=Playfair+Display:ital@0;1&family=Roboto&family=Roboto+Slab&family=Silkscreen&display=swap"    rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
     <title>Diana`s project</title>
 </head>
 <body>
@@ -19,60 +22,64 @@
                             Law company  <!--сделать все буквы заглавными-->
                         </h4>
                     </div>
-                    <div class="header__picture"></div>
-                    <div class="header__nav"> <!--будет флекс row-->
-                        <div class="nav"> 
-                            <ul class="nav__lang">
-                                <li class="lang__item">
-                                    Ук
+                    <div class="header__navigation">
+                        <div class="header__nav"> <!--будет флекс row-->
+                            <div class="nav"> 
+                                <ul class="nav__lang">
+                                    <li class="lang__item">
+                                        Ук
+                                    </li>
+                                    <li class="lang__item">
+                                        Ру
+                                    </li>
+                                    <li class="lang__item" id="special">
+                                        En
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="nav__contacts">
+                                <div class="dot__separator"></div> <!--точка разделения-->
+                                <p class="nav__title">
+                                    Kyiv, Mechnikova str, 14/1
+                                </p>
+                                <div class="dot__separator"></div> <!--точка разделения-->
+                                <a href="tel:+0800211927" class="nav__title nav__title--strong"> <!--выделяю жирным шр.-->
+                                    0800 211 927
+                                </a>
+                                <div class="dot__separator"></div> <!--точка разделения-->
+                                <img src="imgs/header/fb.png" alt="fb_logo">
+                            </div>
+                        </div>
+                        <div class="menu">
+                            <img src="imgs/header/menu_btn.png" alt="menu_burger" class="menu__picture">
+                            <ul class="menu__list">
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">
+                                        about us
+                                    </a>
                                 </li>
-                                <li class="lang__item">
-                                    Ру
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">
+                                        services
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">
+                                        team
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">
+                                        publications
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">
+                                        contact
+                                    </a>
                                 </li>
                             </ul>
-                            <img src="imgs/header/lang.png" alt="lang" class="lang__pic">
                         </div>
-                        <div class="nav__contacts">
-                            <div class="dot__separator"></div> <!--точка разделения-->
-                            <p class="nav__title">
-                                Kyiv, Mechnikova str, 14/1
-                            </p>
-                            <div class="dot__separator"></div> <!--точка разделения-->
-                            <a href="tel:+0800211927" class="nav__title--strong"> <!--выделяю жирным шр.-->
-                                0800 211 927
-                            </a>
-                            <div class="dot__separator"></div> <!--точка разделения-->
-                            <img src="imgs/header/fb.png" alt="fb_logo">
-                        </div>
-                    </div>
-                    <div class="menu">
-                        <ul class="menu__list">
-                            <li class="menu__item">
-                                <a href="#" class="menu__link">
-                                    about us
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="#" class="menu__link">
-                                    services
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="#" class="menu__link">
-                                    team
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="#" class="menu__link">
-                                    publications
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="#" class="menu__link">
-                                    contact
-                                </a>
-                            </li>
-                        </ul>
                     </div>
                 </div> <!--end header__block /будет флекс space-between-->
                 <div class="header__block--positioned"> <!--для задания ширины блока-->
