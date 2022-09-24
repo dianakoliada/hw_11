@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="600" height="300"
+    style="border:1px solid #d3d3d3;">
+    Your browser does not support the canvas    element.
+</canvas>
+
+<script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.beginPath();
+    ctx.moveTo(10,10);
+    ctx.lineTo(10,100);
+    ctx.moveTo(10,50);
+    ctx.lineTo(50,10);
+    ctx.moveTo(10,50);
+    ctx.lineTo(50,100);
+    ctx.moveTo(10,50);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+    ctx.moveTo(160,10);
+    ctx.lineTo(130,110);
+    ctx.moveTo(160,10);
+    ctx.lineTo(180,115);
+    ctx.moveTo(250,115);
+    ctx.lineTo(250,10);
+    ctx.moveTo(250,58);
+    ctx.lineTo(215,115);
+    // ctx.moveTo(300,200);
+    // function getRadians(degrees) {
+    //     return (Math.PI / 120) * degrees;
+    // }
+    ctx.moveTo(250,60);
+    ctx.lineTo(210,60);
+    ctx.lineTo(250,10);
+    ctx.moveTo(270,100);
+    ctx.lineTo(300,10);
+    ctx.moveTo(300,10);
+    ctx.lineTo(330,100);
+    ctx.moveTo(250,100);
+    ctx.lineTo(350,100);
+    ctx.moveTo(380,10);
+    ctx.lineTo(350,110);
+    ctx.moveTo(380,10);
+    ctx.lineTo(410,110);
+    ctx.moveTo(350,65);
+    ctx.lineTo(406,65);
+    
+
+    ctx.stroke();
+</script> 
+</body>
+</html>
