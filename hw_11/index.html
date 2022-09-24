@@ -4,189 +4,194 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css"> <!--проверить правильнось названия-->
+    <link rel="stylesheet" href="css/main.css"> <!--проверить правильнось названия-->
     <title>Diana`s project</title>
 </head>
 <body>
     <div class="wrapper">  <!--для задания общей ширины всего макета-->
         <header class="header">
-            <div class="header__block"> <!--будет флекс space-between-->
-                <div class="header__logo">
-                    <img src="imgs/header/logo.png" alt="company_logo">
-                    <h4 class="header__name">
-                        Law company  <!--сделать все буквы заглавными-->
-                    </h4>
-                </div>
-                <div class="header__nav"> <!--будет флекс row-->
-                    <div class="nav"> 
-                        <ul class="nav__lang">
-                            <li class="lang__item">
-                                Ук
+            <div class="wrap"> <!--для задания ширины хедера-->
+                <div class="header__block"> <!--будет флекс space-between-->
+                    <div class="header__logo">
+                        <img src="imgs/header/logo.png" alt="company_logo">
+                        <h4 class="header__name">
+                            Law company  <!--сделать все буквы заглавными-->
+                        </h4>
+                    </div>
+                    <div class="header__picture"></div>
+                    <div class="header__nav"> <!--будет флекс row-->
+                        <div class="nav"> 
+                            <ul class="nav__lang">
+                                <li class="lang__item">
+                                    Ук
+                                </li>
+                                <li class="lang__item">
+                                    Ру
+                                </li>
+                            </ul>
+                            <img src="imgs/header/lang.png" alt="lang" class="lang__pic">
+                        </div>
+                        <div class="nav__contacts">
+                            <div class="dot__separator"></div> <!--точка разделения-->
+                            <p class="nav__title">
+                                Kyiv, Mechnikova str, 14/1
+                            </p>
+                            <div class="dot__separator"></div> <!--точка разделения-->
+                            <a href="tel:+0800211927" class="nav__title--strong"> <!--выделяю жирным шр.-->
+                                0800 211 927
+                            </a>
+                            <div class="dot__separator"></div> <!--точка разделения-->
+                            <img src="imgs/header/fb.png" alt="fb_logo">
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">
+                                    about us
+                                </a>
                             </li>
-                            <li class="lang__item">
-                                Ру
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">
+                                    services
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">
+                                    team
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">
+                                    publications
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">
+                                    contact
+                                </a>
                             </li>
                         </ul>
-                        <img src="imgs/header/lang.png" alt="lang" class="lang__pic">
                     </div>
-                    <div class="nav__contacts">
-                        <div class="dot__separator"></div> <!--точка разделения-->
-                        <p class="nav__title">
-                            Kyiv, Mechnikova str, 14/1
-                        </p>
-                        <div class="dot__separator"></div> <!--точка разделения-->
-                        <a href="tel:+0800211927" class="nav__title--strong"> <!--выделяю жирным шр.-->
-                            0800 211 927
-                        </a>
-                        <div class="dot__separator"></div> <!--точка разделения-->
-                        <img src="imgs/header/fb.png" alt="fb_logo">
-                    </div>
-                </div>
-                <div class="menu">
-                    <ul class="menu__list">
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">
-                                about us
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">
-                                services
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">
-                                team
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">
-                                publications
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">
-                                contact
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div> <!--end header__block /будет флекс space-between-->
-            <div class="header__block--positioned"> <!--для задания ширины блока-->
-                <p class="title">
-                    you legal solutions provider
-                </p>
-            </div>
-            <div class="header__block--hidden">  <!--блок с кнопкой + задать ширину-->
-                <img src="imgs/header/scroll.png" alt="button" class="btn">
-                <div class="about"> <!--для флекса-->
-                    <div class="about__block"> <!--display block/none js-->
-                        <p class="title about__title"> <!--классу title задам один размер по всему макету, другим классом переопределю его цвет-->
-                            Consistent
-                        </p>
-                        <p class="title about__title">
-                            Customer oriented
-                        </p>
-                        <p class="title about__title">
-                            Innovative
-                        </p>
-                        <p class="title about__title">
-                            Business oriented
-                        </p>
-                    </div>
-                    <div class="horisontal-line">
-                        <img src="imgs/header/line.png" alt="horisontal-line">
-                    </div>
-                    <div class="about__block--aside">
-                        <p class="about__name">
-                            We turn the idea of legal services
-                        </p>
-                        <p class="text">
-                            Consolidating many years of experience and practice, the company's lawyers accompany complex projects and achieve a number of important decisions for the industry. Many of them form the practice of applying the law of the sea in Ukraine.
-                        </p>
-                    </div>
-                </div>
-            </div>  <!-- end блок с кнопкой-->
-            <div class="service"> <!--блок service flex column-->
-                <div class="service__btn">
-                    <p>
-                        Services
+                </div> <!--end header__block /будет флекс space-between-->
+                <div class="header__block--positioned"> <!--для задания ширины блока-->
+                    <p class="title">
+                        you legal solutions provider
                     </p>
-                    <div>
-                        <img src="imgs/header/arrow.png" alt="arrow">
-                    </div>
                 </div>
-                <p class="title">
-                    What can we do better than others?
-                </p>
-                <div class="service-column"> <!--блок service flex wrap-->
-                    <div class="service-column__item">
-                        <div class="service-column__pic">
-                            <img src="imgs/header/ecommerce.png" alt="bag">
+                <div class="header__block--hidden">  <!--блок с кнопкой + задать ширину-->
+                    <img src="imgs/header/scroll.png" alt="button" class="btn">
+                    <div class="about"> <!--для флекса-->
+                        <div class="about__block"> <!--display block/none js-->
+                            <p class="title about__title"> <!--классу title задам один размер по всему макету, другим классом переопределю его цвет-->
+                                Consistent
+                            </p>
+                            <p class="title about__title">
+                                Customer oriented
+                            </p>
+                            <p class="title about__title">
+                                Innovative
+                            </p>
+                            <p class="title about__title">
+                                Business oriented
+                            </p>
                         </div>
-                        <p class="service-column__title">
-                            IT and e-commerce
-                        </p>
-                        <p class="service-column__text">
-                            An endless stream of contracts, tax issues, labor relations, corporate papers - legal work distracts you from doing business. But there is not much work to do to hire an in-house lawyer.
-                        </p>
-                    </div>
-                    <div class="service-column__item">
-                        <div class="service-column__pic">
-                            <img src="imgs/header/support.png" alt="suitcase">
+                        <div class="horisontal-line">
+                            <img src="imgs/header/line.png" alt="horisontal-line">
                         </div>
-                        <p class="service-column__title">
-                            Comprehensive daily legal support
-                        </p>
-                        <p class="service-column__text">
-                            In addition, over time, the work will become the same type and uninteresting for a full-time lawyer. And we know very well how difficult it is to find a good candidate with experience in the field of information technology in Ukraine.
-                        </p>
-                    </div>
-                    <div class="service-column__item">
-                        <div class="service-column__pic">
-                            <img src="imgs/header/corp.png" alt="icon">
+                        <div class="about__block--aside">
+                            <p class="about__name">
+                                We turn the idea of legal services
+                            </p>
+                            <p class="text">
+                                Consolidating many years of experience and practice, the company's lawyers accompany complex projects and achieve a number of important decisions for the industry. Many of them form the practice of applying the law of the sea in Ukraine.
+                            </p>
                         </div>
-                        <p class="service-column__title">
-                            Structuring corporate relationships
-                        </p>
-                        <p class="service-column__text">
-                            Instead of just providing legal services, we will hire a lawyer or a whole team that will fit into the daily life of your company.
-                        </p>
                     </div>
-                    <div class="service-column__item">
-                        <div class="service-column__pic">
-                            <img src="imgs/header/trust.png" alt="hands">
+                </div>  <!-- end блок с кнопкой-->
+                <div class="service"> <!--блок service flex column-->
+                    <div class="service__btn">
+                        <p>
+                            Services
+                        </p>
+                        <div>
+                            <img src="imgs/header/arrow.png" alt="arrow">
                         </div>
-                        <p class="service-column__title">
-                            Building contractual relations
-                        </p>
-                        <p class="service-column__text">
-                            Once a week, or week after month, you have your own lawyer by your side. Anyone in the company can catch it at the coffee maker and just talk about current affairs instead of waiting for update status.
-                        </p>
                     </div>
-                    <div class="service-column__item">
-                        <div class="service-column__pic">
-                            <img src="imgs/header/protection.png" alt="shield">
+                    <p class="title">
+                        What can we do better than others?
+                    </p>
+                    <div class="service-column"> <!--блок service flex wrap-->
+                        <div class="service-column__item">
+                            <div class="service-column__pic">
+                                <img src="imgs/header/ecommerce.png" alt="bag">
+                            </div>
+                            <p class="service-column__title">
+                                IT and e-commerce
+                            </p>
+                            <p class="service-column__text">
+                                An endless stream of contracts, tax issues, labor relations, corporate papers - legal work distracts you from doing business. But there is not much work to do to hire an in-house lawyer.
+                            </p>
                         </div>
-                        <p class="service-column__title">
-                            Protection of business, intellectual property
-                        </p>
-                        <p class="service-column__text">
-                            And all the other time he will work on new diverse projects, so he will definitely not stop in professional development. One way or another, all Axon Partners will work for you instead of a corporate lawyer.
-                        </p>
-                    </div>
-                    <div class="service-column__item">
-                        <div class="service-column__pic">
-                            <img src="imgs/header/judje.png" alt="court">
+                        <div class="service-column__item">
+                            <div class="service-column__pic">
+                                <img src="imgs/header/support.png" alt="suitcase">
+                            </div>
+                            <p class="service-column__title">
+                                Comprehensive daily legal support
+                            </p>
+                            <p class="service-column__text">
+                                In addition, over time, the work will become the same type and uninteresting for a full-time lawyer. And we know very well how difficult it is to find a good candidate with experience in the field of information technology in Ukraine.
+                            </p>
                         </div>
-                        <p class="service-column__title">
-                            Judicial representation
-                        </p>
-                        <p class="service-column__text">
-                            Is it a small, medium-sized company or a market leader? Local business or multinational company? Do you have your own legal department or not?
-                        </p>
-                    </div>
-                </div> <!-- end блок service flex wrap-->
-            </div> <!-- end блок service-->
+                        <div class="service-column__item">
+                            <div class="service-column__pic">
+                                <img src="imgs/header/corp.png" alt="icon">
+                            </div>
+                            <p class="service-column__title">
+                                Structuring corporate relationships
+                            </p>
+                            <p class="service-column__text">
+                                Instead of just providing legal services, we will hire a lawyer or a whole team that will fit into the daily life of your company.
+                            </p>
+                        </div>
+                        <div class="service-column__item">
+                            <div class="service-column__pic">
+                                <img src="imgs/header/trust.png" alt="hands">
+                            </div>
+                            <p class="service-column__title">
+                                Building contractual relations
+                            </p>
+                            <p class="service-column__text">
+                                Once a week, or week after month, you have your own lawyer by your side. Anyone in the company can catch it at the coffee maker and just talk about current affairs instead of waiting for update status.
+                            </p>
+                        </div>
+                        <div class="service-column__item">
+                            <div class="service-column__pic">
+                                <img src="imgs/header/protection.png" alt="shield">
+                            </div>
+                            <p class="service-column__title">
+                                Protection of business, intellectual property
+                            </p>
+                            <p class="service-column__text">
+                                And all the other time he will work on new diverse projects, so he will definitely not stop in professional development. One way or another, all Axon Partners will work for you instead of a corporate lawyer.
+                            </p>
+                        </div>
+                        <div class="service-column__item">
+                            <div class="service-column__pic">
+                                <img src="imgs/header/judje.png" alt="court">
+                            </div>
+                            <p class="service-column__title">
+                                Judicial representation
+                            </p>
+                            <p class="service-column__text">
+                                Is it a small, medium-sized company or a market leader? Local business or multinational company? Do you have your own legal department or not?
+                            </p>
+                        </div>
+                    </div> <!-- end блок service flex wrap-->
+                </div> <!-- end блок service-->
+            </div>
         </header>
     </div>
 </body>

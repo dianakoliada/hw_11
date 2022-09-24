@@ -1,0 +1,17 @@
+$mainColor: #24A3FF;
+$secondaryColor: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%); /*background*/
+$color: #B3B3BA;
+$additionalColor: #323264;
+$primarySize: 10px;
+$Size: 1%;
+$mainSize: 1rem;
+
+
+
+/*Определяем, какие необходимо подключать файлы scss на страницу*/
+@import 'header';
+@import 'footer';
+
+.wrapper {
+    margin: 0 auto;
+}
