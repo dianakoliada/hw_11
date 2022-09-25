@@ -11,6 +11,7 @@ $mainSize: 1rem;
 /*Определяем, какие необходимо подключать файлы scss на страницу*/
 @import 'header';
 @import 'footer';
+@import "mixin";
 
 body {
     font-family: 'Montserrat', sans-serif;

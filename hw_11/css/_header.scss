@@ -1,9 +1,9 @@
+@import "mixin";
 $headerMainColor: White;
 
 /*1920*/
 header {
     background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
-    background-size: 100% 100% contain;
     z-index: 99;
     padding-top: 90px;
     
@@ -11,16 +11,12 @@ header {
         background: url(../imgs/header/symbol.png) no-repeat;
         background-position: center top; /*растянуть символ наверх!!!*/
         z-index: 999;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include setPosition (flex, column, baseline, center);
 
         .header__block {
             outline: 2px solid yellow;
             width: $Size *90;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            @include setPosition (flex, row, space-between, flex-end);
 
             .header__name {
                 color: $headerMainColor;
@@ -36,16 +32,14 @@ header {
                 width: $Size*40;
 
                 .header__nav {
-                    display: flex;
-                    justify-content: flex-end;
+                    @include setPosition (flex, row, flex-end, flex-end);
 
                     .nav {
                         width: $Size*20;
 
                         .nav__lang {
                             outline: 2px solid white;
-                            display: flex;
-                            justify-content: flex-end;
+                            @include setPosition (flex, row, flex-end, flex-end);
                             
                             .lang__item {
                                 color: $headerMainColor;
@@ -70,9 +64,7 @@ header {
 
                     .nav__contacts {
                         outline: 2px solid azure;
-                        display: flex;
-                        justify-content: space-around;
-                        align-items: center;
+                        @include setPosition (flex, row, space-around, center);
                         width: $Size*60;
 
                         .dot__separator {
@@ -97,7 +89,6 @@ header {
 
                 .menu {
                     outline: 2px solid lime;
-                    
                     padding-top: $Size*2;
                     display: flex;
                     
@@ -106,8 +97,7 @@ header {
                     }
                     
                     .menu__list {
-                        display: flex;
-                        justify-content: flex-end;
+                        @include setPosition (flex, row, flex-end, flex-end);
                         width: $Size*100;
                         
                         .menu__item {
@@ -120,9 +110,35 @@ header {
                                 font-size: $primarySize +6;
                                 line-height: $primarySize *2;
                                 text-decoration: none;
-
                             }
                         }
+                    }
+                }
+            }
+        }
+
+        .header__block--positioned {
+            outline: 2px solid rgb(13, 155, 13);
+            margin-top: $Size +15;
+
+            .title {
+                font-weight: 700;
+                font-size: $mainSize +1.37;
+                color: $headerMainColor;
+                line-height: $mainSize +1.89;
+            }
+        }
+
+        .header__block--hidden {
+            outline: 2px solid rgb(229, 234, 229);
+            
+
+            .about {
+
+                .about__block {
+
+                    .title .about__title {
+
                     }
                 }
             }

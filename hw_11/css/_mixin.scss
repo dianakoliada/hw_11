@@ -1,0 +1,6 @@
+@mixin setPosition ($dispFlx, $flxDir, $jc, $alignItem) {
+    display: $dispFlx;
+    flex-direction: $flxDir;
+    justify-content: $jc;
+    align-items: $alignItem;
+}
