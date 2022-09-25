@@ -222,5 +222,53 @@ header {
 
 body {
   font-family: 'Montserrat', sans-serif; }
+  body .main .block {
+    outline: 2px solid red;
+    margin-top: 5%; }
+    body .main .block .block__info {
+      outline: 2px solid #080808;
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      background-color: #F5F5FA; }
+      body .main .block .block__info .block__item {
+        padding: 1.5%; }
+        body .main .block .block__info .block__item .block__title {
+          outline: 2px solid blue;
+          font-weight: bolder;
+          font-size: 2.38rem;
+          line-height: 2.88rem;
+          background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent; }
+        body .main .block .block__info .block__item .block__text {
+          padding-top: 2%;
+          color: #B3B3BA;
+          font-weight: bold;
+          font-size: 1rem;
+          line-height: 1.25rem; }
+        body .main .block .block__info .block__item .block__text--small {
+          padding-top: 0.5%;
+          color: #B3B3BA;
+          font-size: 1rem -0.1;
+          line-height: 1.38rem; }
+  body .main .main__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    body .main .main__wrap .block__btn {
+      padding-top: 1.5%; }
+    body .main .main__wrap .main__title {
+      padding: 2% 0;
+      color: #323264;
+      font-weight: bold;
+      font-size: 1.14rem;
+      line-height: 1.6rem;
+      letter-spacing: 1px;
+      text-transform: uppercase; }
 
 /*# sourceMappingURL=main.css.map */
