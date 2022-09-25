@@ -14,17 +14,21 @@
 <body>
     <div class="wrapper">  <!--для задания общей ширины всего макета-->
         <header class="header">
+            <div class="header__background"></div>
+            <div class="header__background--secondary"></div>
             <div class="wrap"> <!--для задания ширины хедера-->
                 <div class="header__block"> <!--будет флекс space-between-->
                     <div class="header__logo">
-                        <img src="imgs/header/logo.png" alt="company_logo">
+                        <a href="#">
+                            <img src="imgs/header/logo.png" alt="company_logo">
+                        </a>
                         <h4 class="header__name">
                             Law company  <!--сделать все буквы заглавными-->
                         </h4>
                     </div>
                     <div class="header__navigation">
                         <div class="header__nav"> <!--будет флекс row-->
-                            <div class="nav"> 
+                            <div class="nav">  <!--для моб rgba-->
                                 <ul class="nav__lang">
                                     <li class="lang__item">
                                         Ук
@@ -88,11 +92,15 @@
                     </p>
                 </div>
                 <div class="header__block--hidden">  <!--блок с кнопкой + задать ширину-->
-                    <img src="imgs/header/scroll.png" alt="button" class="btn">
+                    <div class="btn">
+                        <img src="imgs/header/scroll.png" alt="button">
+                    </div>
                     <div class="about"> <!--для флекса-->
                         <div class="about__block"> <!--display block/none js-->
-                            <p class="title about__title"> <!--классу title задам один размер по всему макету, другим классом переопределю его цвет-->
-                                Consistent
+                            <p class="title about__title"> 
+                                <span id="main">
+                                    Consistent
+                                </span>
                             </p>
                             <p class="title about__title">
                                 Customer oriented
@@ -111,7 +119,7 @@
                             <p class="about__name">
                                 We turn the idea of legal services
                             </p>
-                            <p class="text">
+                            <p class="about__list">
                                 Consolidating many years of experience and practice, the company's lawyers accompany complex projects and achieve a number of important decisions for the industry. Many of them form the practice of applying the law of the sea in Ukraine.
                             </p>
                         </div>
@@ -119,11 +127,11 @@
                 </div>  <!-- end блок с кнопкой-->
                 <div class="service"> <!--блок service flex column-->
                     <div class="service__btn">
-                        <p>
+                        <p class="service__btn--primary">
                             Services
                         </p>
                         <div>
-                            <img src="imgs/header/arrow.png" alt="arrow">
+                            <img src="imgs/header/arrow_pink.png" alt="arrow">
                         </div>
                     </div>
                     <p class="title">
@@ -132,7 +140,7 @@
                     <div class="service-column"> <!--блок service flex wrap-->
                         <div class="service-column__item">
                             <div class="service-column__pic">
-                                <img src="imgs/header/ecommerce.png" alt="bag">
+                                <img src="imgs/header/ecommerce.png" alt="bag" class="service__picture">
                             </div>
                             <p class="service-column__title">
                                 IT and e-commerce
@@ -143,9 +151,9 @@
                         </div>
                         <div class="service-column__item">
                             <div class="service-column__pic">
-                                <img src="imgs/header/support.png" alt="suitcase">
+                                <img src="imgs/header/support.png" alt="suitcase" class="service__picture">
                             </div>
-                            <p class="service-column__title">
+                            <p class="service-column__title" id="size">
                                 Comprehensive daily legal support
                             </p>
                             <p class="service-column__text">
@@ -154,7 +162,7 @@
                         </div>
                         <div class="service-column__item">
                             <div class="service-column__pic">
-                                <img src="imgs/header/corp.png" alt="icon">
+                                <img src="imgs/header/corp.png" alt="icon" class="service__picture">
                             </div>
                             <p class="service-column__title">
                                 Structuring corporate relationships
@@ -165,7 +173,7 @@
                         </div>
                         <div class="service-column__item">
                             <div class="service-column__pic">
-                                <img src="imgs/header/trust.png" alt="hands">
+                                <img src="imgs/header/trust.png" alt="hands" class="service__picture">
                             </div>
                             <p class="service-column__title">
                                 Building contractual relations
@@ -176,9 +184,9 @@
                         </div>
                         <div class="service-column__item">
                             <div class="service-column__pic">
-                                <img src="imgs/header/protection.png" alt="shield">
+                                <img src="imgs/header/protection.png" alt="shield" class="service__picture">
                             </div>
-                            <p class="service-column__title">
+                            <p class="service-column__title" id="box">
                                 Protection of business, intellectual property
                             </p>
                             <p class="service-column__text">
@@ -187,7 +195,7 @@
                         </div>
                         <div class="service-column__item">
                             <div class="service-column__pic">
-                                <img src="imgs/header/judje.png" alt="court">
+                                <img src="imgs/header/judje.png" alt="court" class="service__picture">
                             </div>
                             <p class="service-column__title">
                                 Judicial representation
@@ -200,6 +208,10 @@
                 </div> <!-- end блок service-->
             </div>
         </header>
+        <!-- end of header-->
+        <main>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto aut necessitatibus, animi sapiente cupiditate inventore illum culpa voluptatibus odit soluta excepturi saepe alias dolorum voluptate, quasi vel maxime repellendus amet accusantium. Laudantium voluptatibus culpa a nesciunt dignissimos at reiciendis, quae magni iste libero tempore amet, ipsam necessitatibus iusto quaerat placeat velit nulla id. Tempore illo accusamus sint magni ab vel ullam temporibus, veniam cum. Nisi itaque sit dolorum, error amet sapiente libero cum reprehenderit nihil perspiciatis dolor? Autem assumenda corporis dolorem dolore illum cum, ratione laboriosam odio quae reiciendis suscipit. Magni, doloremque hic. Recusandae beatae vero quis! Et, ea vero.
+        </main>
     </div>
 </body>
 </html>

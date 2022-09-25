@@ -4,8 +4,8 @@ $headerMainColor: White;
 /*1920*/
 header {
     background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+    border-radius: 0px 0px 12px 12px;
     z-index: 99;
-    padding-top: 90px;
     
     .wrap {
         background: url(../imgs/header/symbol.png) no-repeat;
@@ -17,6 +17,7 @@ header {
             outline: 2px solid yellow;
             width: $Size *90;
             @include setPosition (flex, row, space-between, flex-end);
+            padding-top: 60px;
 
             .header__name {
                 color: $headerMainColor;
@@ -43,7 +44,7 @@ header {
                             
                             .lang__item {
                                 color: $headerMainColor;
-                                font-weight: 700;
+                                font-weight: bold;
                                 font-size: $mainSize -0.3;
                                 letter-spacing: $primarySize -9;
                                 margin-right: 10%; /*отступы между лишками*/
@@ -81,7 +82,6 @@ header {
                         }
 
                         .nav__title--strong {
-                            text-decoration: none;
                             font-weight: 700;
                         }
                     }    
@@ -106,10 +106,9 @@ header {
                             .menu__link {
                                 outline: 2px solid rgb(154, 159, 154);
                                 color: $headerMainColor;
-                                font-weight: 700;
+                                font-weight: bold;
                                 font-size: $primarySize +6;
                                 line-height: $primarySize *2;
-                                text-decoration: none;
                             }
                         }
                     }
@@ -119,11 +118,11 @@ header {
 
         .header__block--positioned {
             outline: 2px solid rgb(13, 155, 13);
-            margin-top: $Size +15;
+            margin-top: $Size +12;
 
             .title {
-                font-weight: 700;
-                font-size: $mainSize +1.37;
+                font-weight: bold;
+                font-size: $mainSize +1.1;
                 color: $headerMainColor;
                 line-height: $mainSize +1.89;
             }
@@ -131,14 +130,146 @@ header {
 
         .header__block--hidden {
             outline: 2px solid rgb(229, 234, 229);
-            
+            width: $Size *90;
+            margin-top: $Size *17;
 
+            .btn {
+                display: flex;
+                justify-content: center;
+            }
+            
             .about {
+                outline: 2px solid rgb(35, 143, 35);
+                padding-top: 5%;
+                display: flex;
+                justify-content: center;
 
                 .about__block {
+                    outline: 2px solid rgb(141, 169, 205);
+                    width: 62%;
+                    @include setPosition (flex, column, center, flex-end);
 
-                    .title .about__title {
+                    .about__title {   /*hover*/
+                        font-weight: bold;
+                        font-size: $mainSize +1.1;
+                        color: $color;
+                        line-height: $mainSize +1.89;
+                        padding-bottom: 3.5%;
+                    }
 
+                    #main {
+                        background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+
+                .horisontal-line {
+                    padding: 0 3%;
+                }
+
+                .about__block--aside {
+                    outline: 2px solid rgb(214, 150, 13);
+                    width: $Size *100;
+                    @include setPosition (flex, column, center, baseline);
+
+                    .about__name {
+                        font-weight: bold;
+                        font-size: $primarySize +20;
+                        line-height: $primarySize +27;
+                        color: $headerMainColor;
+                        padding-bottom: $Size *3;
+                    }
+
+                    .about__list {
+                        width: $Size *80;
+                        outline: 2px solid red;
+                        font-size: $primarySize +9;
+                        line-height: $primarySize +20;
+                        color: $headerMainColor;
+                    }
+                }
+            }
+        }
+
+        .service {
+            outline: 2px solid rgb(118, 174, 15);
+            width: $Size *90;
+            padding-bottom: $Size *4;
+            
+            .service__btn {
+                outline: 2px solid rgb(220, 221, 215);
+                display: flex;
+                font-weight: bold;
+                font-size: $primarySize +4;
+                line-height: $primarySize +7;
+                letter-spacing: $primarySize - 9;
+                color: #F0145A;
+                padding-bottom: $Size;
+
+                .service__btn--primary {
+                    padding-right: 0.4%;
+                }
+            }
+
+            .title {
+                background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: bold;
+                font-size: $primarySize +28;
+                line-height: $primarySize +36;
+            }
+
+            .service-column {
+                padding-top: $Size +2;
+                outline: 2px solid rgb(201, 10, 20);
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                
+                .service-column__item {
+                    outline: 2px solid rgb(15, 14, 14);
+                    width: $Size *30;
+
+                    .service-column__pic {
+                        background-color: $headerMainColor;
+                        width: $primarySize +82;
+                        height: $primarySize +82;
+                        border-radius: $primarySize +14;
+                        position: relative;
+                        
+                        .service__picture {
+                            position: absolute;
+                            left: $Size *13;
+                            top: $Size *12;
+                           
+                        }
+                    }
+                    .service-column__title {
+                        outline: 2px solid rgb(201, 10, 20);
+                        color: $mainColor;
+                        font-size: $mainSize +0.375;
+                        line-height: $mainSize +0.69;
+                        font-weight: bold;
+                        padding: 3% 0;
+                    }
+
+                    #size {
+                        outline: 2px solid rgb(13, 10, 10);
+                        width: $Size *50;
+                    }
+
+                    #box {
+                        outline: 2px solid rgb(10, 201, 128);
+                        width: $Size *80;
+                    }
+
+                    .service-column__text {
+                        color: $headerMainColor;
+                        font-size: $mainSize;
+                        line-height: $mainSize +0.62;
+                        
                     }
                 }
             }
