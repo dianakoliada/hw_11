@@ -5,7 +5,31 @@ $headerMainColor: White;
 header {
     background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
     border-radius: 0px 0px 12px 12px;
+    position: relative;
     z-index: 99;
+
+    // .header__background {
+    //     background: #CACADB;
+    //     border-radius: 0px 0px 12px 12px;
+    //     // position: absolute;
+    //     left: 20px;
+    //     right: 20px;
+    //     top: 0%;
+    //     bottom: 100%;
+    //     // z-index: -1;
+		
+    //     .header__background--secondary {
+    //         background: #E7E7F2;
+    //         border-radius: 0px 0px 12px 12px;   
+    //         // position: absolute;
+    //         left: 40px;
+    //         right: 40px;
+    //         top: 50%;
+    //         bottom: 50%; 
+    //         // z-index: -2;   
+    //     }
+		
+    // }
     
     .wrap {
         background: url(../imgs/header/symbol.png) no-repeat;
