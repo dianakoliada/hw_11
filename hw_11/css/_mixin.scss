@@ -4,3 +4,36 @@
     justify-content: $jc;
     align-items: $alignItem;
 }
+
+@mixin decorateTitle ($fontWt, $fontSz, $letterSp, $lineHt) {
+    font-weight: $fontWt;
+    font-size: $fontSz;
+    letter-spacing: $letterSp;
+    line-height: $lineHt;
+}
+
+@mixin redecorateElement ($dispBl, $lineHt, $txtAlin, $bgCol, $wdth, $hght, $bordRad) {
+    display: $dispBl;
+    line-height: $lineHt;
+    text-align: $txtAlin;
+    background-color: $bgCol;
+    width: $wdth;
+    height: $hght;
+    border-radius: $bordRad;
+}
+
+@mixin decorateIcons ($bgCol, $wdth, $hght, $bordRad, $posit) {
+    background-color: $bgCol;
+    width: $wdth;
+    height: $hght;
+    border-radius: $bordRad;
+    position: $posit;
+}
+
+@mixin setLogoStyle ($bordRad, $wdth, $mrgn, $dispFl, $flWrp) {
+    border-radius: $bordRad;
+    width: $wdth;
+    margin: $mrgn;
+    display: $dispFl;
+    flex-wrap: $flWrp;
+}

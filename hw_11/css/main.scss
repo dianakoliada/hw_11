@@ -13,29 +13,33 @@ $mainSize: 1rem;
 @import 'footer';
 @import "mixin";
 
+/*1920*/
 body {
     font-family: 'Montserrat', sans-serif;
 
     .main {
         .block {
             outline: 2px solid red;
-            margin-top: 5%;
+            margin-top: $Size *5;
             
             .block__info {
                 outline: 2px solid rgb(8, 8, 8);
-                width: 90%;
+                width: $Size *90;
                 margin: 0 auto;
-                display: flex;
-                align-items: center;
+                @include setPosition (flex, row, baseline, center);
                 background-color: #F5F5FA;
-
-
+            
                 .block__pic {
 
+                    .imgs {
+                    overflow: hidden; /*если какая то картинка больше размером, мы ее обрезаем или скрываем*/
+                    margin: 0 auto;
+
+                    }
                 }
 
                 .block__item {
-                    padding: 1.5%;
+                    padding: $Size *1.5;
 
                     .block__icon {
 
@@ -43,9 +47,7 @@ body {
 
                     .block__title {
                         outline: 2px solid blue;
-                        font-weight: bolder;
-                        font-size: $mainSize +1.38;
-                        line-height: $mainSize + 1.88;
+                        @include decorateTitle (bold, $mainSize +1.38, normal, $mainSize + 1.88);
                         background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
@@ -54,43 +56,58 @@ body {
                     }
                     
                     .block__text {
-                        padding-top: 2%;
+                        padding-top: $Size *2;
                         color: $color;
-                        font-weight: bold;
-                        font-size: $mainSize;
-                        line-height: $mainSize +0.25;
+                        @include decorateTitle (bold, $mainSize, normal, $mainSize +0.25);
                     }
                     
                     .block__text--small {
-                        padding-top: 0.5%;
+                        padding-top: $Size *0.5;
                         color: $color;
-                        font-size: $mainSize -0.1;
-                        line-height: $mainSize +0.38;
-
+                        @include decorateTitle (normal, $mainSize -0.1, normal, $mainSize +0.38);
                     }
                 }
             }
         }
 
         .main__wrap {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            @include setPosition (flex, column, center, center);
 
             .block__btn {
-                padding-top: 1.5%;
+                padding-top: $Size *1.5;
             }
 
             .main__title {
                 padding: 2% 0;
                 color: $additionalColor;
-                font-weight: bold;
-                font-size: $mainSize +0.14;
-                line-height: $mainSize +0.6;
-                letter-spacing: $primarySize - 9;
-                text-transform: uppercase;
+                @include decorateTitle (bold, $mainSize +0.14, $primarySize - 9, $mainSize +0.6);
+                text-transform: uppercase; 
             }
+        }
+
+        .block__logo {
+            outline: 2px solid blue;
+            @include setLogoStyle ($primarySize +2,  $Size *91, 0 auto, flex, wrap);
+            
+            .logos__item {
+                display: block;
+            }
+
+            #side_topleft {
+                border-radius: 12px 0px 0px 0px;
+            }
+            
+            #side_topright {
+                border-radius: 0px 12px 0px 0px;
+            }
+            
+            #side_bottomleft {
+                border-radius: 0px 0px 0px 12px;
+            }
+            
+            #side_bottomright {
+                border-radius: 0px 0px 12px 0px;
+            } 
         }
     }
 }

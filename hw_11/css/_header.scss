@@ -33,7 +33,7 @@ header {
     
     .wrap {
         background: url(../imgs/header/symbol.png) no-repeat;
-        background-position: center top; /*растянуть символ наверх!!!*/
+        background-position: center top;
         z-index: 999;
         @include setPosition (flex, column, baseline, center);
 
@@ -41,15 +41,12 @@ header {
             outline: 2px solid yellow;
             width: $Size *90;
             @include setPosition (flex, row, space-between, flex-end);
-            padding-top: 60px;
+            padding-top: $primarySize +50;
 
             .header__name {
                 color: $headerMainColor;
                 text-transform: uppercase;
-                font-weight: 600;
-                font-size: $primarySize;
-                letter-spacing: $primarySize - 5;
-                line-height: $primarySize +5;
+                @include decorateTitle (600, $primarySize, $primarySize - 5, $primarySize +5);
             }
 
             .header__navigation {
@@ -68,21 +65,12 @@ header {
                             
                             .lang__item {
                                 color: $headerMainColor;
-                                font-weight: bold;
-                                font-size: $mainSize -0.3;
-                                letter-spacing: $primarySize -9;
+                                @include decorateTitle (bold, $mainSize -0.3, $primarySize -9, $primarySize +13);
                                 margin-right: 10%; /*отступы между лишками*/
-                                line-height: $primarySize +13;
                             }
     
                             #special {
-                                display: block;
-                                line-height: $primarySize +13;
-                                text-align: center;
-                                background-color: #F0145A;
-                                width: $primarySize +23;
-                                height: $primarySize +15;
-                                border-radius: $primarySize - 2;
+                                @include redecorateElement (block, $primarySize +13, center, #F0145A, $primarySize +23, $primarySize +15, $primarySize - 2);
                             }
                         }      
                     }
@@ -101,12 +89,11 @@ header {
 
                         .nav__title {
                             color: $headerMainColor;
-                            font-size: $primarySize +6;
-                            line-height: $primarySize *2;
+                            @include decorateTitle (normal, $primarySize +6, normal, $primarySize *2);
                         }
 
                         .nav__title--strong {
-                            font-weight: 700;
+                            font-weight: bold;
                         }
                     }    
                 }
@@ -130,9 +117,7 @@ header {
                             .menu__link {
                                 outline: 2px solid rgb(154, 159, 154);
                                 color: $headerMainColor;
-                                font-weight: bold;
-                                font-size: $primarySize +6;
-                                line-height: $primarySize *2;
+                                @include decorateTitle (bold, $primarySize +6, normal, $primarySize *2);
                             }
                         }
                     }
@@ -145,10 +130,8 @@ header {
             margin-top: $Size +12;
 
             .title {
-                font-weight: bold;
-                font-size: $mainSize +1.1;
+                @include decorateTitle (bold, $mainSize +1.1, normal, $mainSize +1.89);
                 color: $headerMainColor;
-                line-height: $mainSize +1.89;
             }
         }
 
@@ -174,10 +157,8 @@ header {
                     @include setPosition (flex, column, center, flex-end);
 
                     .about__title {   /*hover*/
-                        font-weight: bold;
-                        font-size: $mainSize +1.1;
+                        @include decorateTitle (bold, $mainSize +1.1, normal, $mainSize +1.89);
                         color: $color;
-                        line-height: $mainSize +1.89;
                         padding-bottom: 3.5%;
                     }
 
@@ -198,9 +179,7 @@ header {
                     @include setPosition (flex, column, center, baseline);
 
                     .about__name {
-                        font-weight: bold;
-                        font-size: $primarySize +20;
-                        line-height: $primarySize +27;
+                        @include decorateTitle (bold, $primarySize +20, normal, $primarySize +27);
                         color: $headerMainColor;
                         padding-bottom: $Size *3;
                     }
@@ -208,8 +187,7 @@ header {
                     .about__list {
                         width: $Size *80;
                         outline: 2px solid red;
-                        font-size: $primarySize +9;
-                        line-height: $primarySize +20;
+                        @include decorateTitle (normal, $primarySize +9, normal, $primarySize +20);
                         color: $headerMainColor;
                     }
                 }
@@ -224,10 +202,7 @@ header {
             .service__btn {
                 outline: 2px solid rgb(220, 221, 215);
                 display: flex;
-                font-weight: bold;
-                font-size: $primarySize +4;
-                line-height: $primarySize +7;
-                letter-spacing: $primarySize - 9;
+                @include decorateTitle (bold, $primarySize +4, $primarySize - 9, $primarySize +7);
                 color: #F0145A;
                 padding-bottom: $Size;
 
@@ -240,16 +215,13 @@ header {
                 background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-                font-weight: bold;
-                font-size: $primarySize +28;
-                line-height: $primarySize +36;
+                @include decorateTitle (bold, $primarySize +28, normal, $primarySize +36);
             }
 
             .service-column {
                 padding-top: $Size +2;
                 outline: 2px solid rgb(201, 10, 20);
-                display: flex;
-                justify-content: space-between;
+                @include setPosition (flex, row, space-between, baseline);
                 flex-wrap: wrap;
                 
                 .service-column__item {
@@ -257,11 +229,7 @@ header {
                     width: $Size *30;
 
                     .service-column__pic {
-                        background-color: $headerMainColor;
-                        width: $primarySize +82;
-                        height: $primarySize +82;
-                        border-radius: $primarySize +14;
-                        position: relative;
+                        @include decorateIcons ($headerMainColor, $primarySize +82, $primarySize +82, $primarySize +14, relative);
                         
                         .service__picture {
                             position: absolute;
@@ -273,9 +241,7 @@ header {
                     .service-column__title {
                         outline: 2px solid rgb(201, 10, 20);
                         color: $mainColor;
-                        font-size: $mainSize +0.375;
-                        line-height: $mainSize +0.69;
-                        font-weight: bold;
+                        @include decorateTitle (bold, $mainSize +0.375, normal, $mainSize +0.69);
                         padding: 3% 0;
                     }
 
@@ -291,24 +257,11 @@ header {
 
                     .service-column__text {
                         color: $headerMainColor;
-                        font-size: $mainSize;
-                        line-height: $mainSize +0.62;
-                        
+                        @include decorateTitle (normal, $mainSize, normal, $mainSize +0.62);  
                     }
                 }
             }
         }
-        
-
-
     }
-
-
-
-
-
-
-
-
 
 }

@@ -10,7 +10,6 @@ header {
   header .wrap {
     background: url(../imgs/header/symbol.png) no-repeat;
     background-position: center top;
-    /*растянуть символ наверх!!!*/
     z-index: 999;
     display: flex;
     flex-direction: column;
@@ -52,9 +51,9 @@ header {
                 font-weight: bold;
                 font-size: 1rem -0.3;
                 letter-spacing: 10px -9;
+                line-height: 23px;
                 margin-right: 10%;
-                /*отступы между лишками*/
-                line-height: 23px; }
+                /*отступы между лишками*/ }
               header .wrap .header__block .header__navigation .header__nav .nav .nav__lang #special {
                 display: block;
                 line-height: 23px;
@@ -77,10 +76,12 @@ header {
               background-color: #E6E6F0; }
             header .wrap .header__block .header__navigation .header__nav .nav__contacts .nav__title {
               color: White;
+              font-weight: normal;
               font-size: 16px;
+              letter-spacing: normal;
               line-height: 20px; }
             header .wrap .header__block .header__navigation .header__nav .nav__contacts .nav__title--strong {
-              font-weight: 700; }
+              font-weight: bold; }
         header .wrap .header__block .header__navigation .menu {
           outline: 2px solid lime;
           padding-top: 2%;
@@ -101,6 +102,7 @@ header {
                 color: White;
                 font-weight: bold;
                 font-size: 16px;
+                letter-spacing: normal;
                 line-height: 20px; }
     header .wrap .header__block--positioned {
       outline: 2px solid #0d9b0d;
@@ -108,8 +110,9 @@ header {
       header .wrap .header__block--positioned .title {
         font-weight: bold;
         font-size: 2.1rem;
-        color: White;
-        line-height: 2.89rem; }
+        letter-spacing: normal;
+        line-height: 2.89rem;
+        color: White; }
     header .wrap .header__block--hidden {
       outline: 2px solid #e5eae5;
       width: 90%;
@@ -133,8 +136,9 @@ header {
             /*hover*/
             font-weight: bold;
             font-size: 2.1rem;
-            color: #B3B3BA;
+            letter-spacing: normal;
             line-height: 2.89rem;
+            color: #B3B3BA;
             padding-bottom: 3.5%; }
           header .wrap .header__block--hidden .about .about__block #main {
             background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
@@ -152,13 +156,16 @@ header {
           header .wrap .header__block--hidden .about .about__block--aside .about__name {
             font-weight: bold;
             font-size: 30px;
+            letter-spacing: normal;
             line-height: 37px;
             color: White;
             padding-bottom: 3%; }
           header .wrap .header__block--hidden .about .about__block--aside .about__list {
             width: 80%;
             outline: 2px solid red;
+            font-weight: normal;
             font-size: 19px;
+            letter-spacing: normal;
             line-height: 30px;
             color: White; }
     header .wrap .service {
@@ -170,8 +177,8 @@ header {
         display: flex;
         font-weight: bold;
         font-size: 14px;
-        line-height: 17px;
         letter-spacing: 1px;
+        line-height: 17px;
         color: #F0145A;
         padding-bottom: 1%; }
         header .wrap .service .service__btn .service__btn--primary {
@@ -182,12 +189,15 @@ header {
         -webkit-text-fill-color: transparent;
         font-weight: bold;
         font-size: 38px;
+        letter-spacing: normal;
         line-height: 46px; }
       header .wrap .service .service-column {
         padding-top: 3%;
         outline: 2px solid #c90a14;
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
+        align-items: baseline;
         flex-wrap: wrap; }
         header .wrap .service .service-column .service-column__item {
           outline: 2px solid #0f0e0e;
@@ -205,9 +215,10 @@ header {
           header .wrap .service .service-column .service-column__item .service-column__title {
             outline: 2px solid #c90a14;
             color: #24A3FF;
-            font-size: 1.375rem;
-            line-height: 1.69rem;
             font-weight: bold;
+            font-size: 1.375rem;
+            letter-spacing: normal;
+            line-height: 1.69rem;
             padding: 3% 0; }
           header .wrap .service .service-column .service-column__item #size {
             outline: 2px solid #0d0a0a;
@@ -217,9 +228,12 @@ header {
             width: 80%; }
           header .wrap .service .service-column .service-column__item .service-column__text {
             color: White;
+            font-weight: normal;
             font-size: 1rem;
+            letter-spacing: normal;
             line-height: 1.62rem; }
 
+/*1920*/
 body {
   font-family: 'Montserrat', sans-serif; }
   body .main .block {
@@ -230,14 +244,21 @@ body {
       width: 90%;
       margin: 0 auto;
       display: flex;
+      flex-direction: row;
+      justify-content: baseline;
       align-items: center;
       background-color: #F5F5FA; }
+      body .main .block .block__info .block__pic .imgs {
+        overflow: hidden;
+        /*если какая то картинка больше размером, мы ее обрезаем или скрываем*/
+        margin: 0 auto; }
       body .main .block .block__info .block__item {
         padding: 1.5%; }
         body .main .block .block__info .block__item .block__title {
           outline: 2px solid blue;
-          font-weight: bolder;
+          font-weight: bold;
           font-size: 2.38rem;
+          letter-spacing: normal;
           line-height: 2.88rem;
           background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
           -webkit-background-clip: text;
@@ -249,11 +270,14 @@ body {
           color: #B3B3BA;
           font-weight: bold;
           font-size: 1rem;
+          letter-spacing: normal;
           line-height: 1.25rem; }
         body .main .block .block__info .block__item .block__text--small {
           padding-top: 0.5%;
           color: #B3B3BA;
+          font-weight: normal;
           font-size: 1rem -0.1;
+          letter-spacing: normal;
           line-height: 1.38rem; }
   body .main .main__wrap {
     display: flex;
@@ -267,8 +291,25 @@ body {
       color: #323264;
       font-weight: bold;
       font-size: 1.14rem;
-      line-height: 1.6rem;
       letter-spacing: 1px;
+      line-height: 1.6rem;
       text-transform: uppercase; }
+  body .main .block__logo {
+    outline: 2px solid blue;
+    border-radius: 12px;
+    width: 91%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; }
+    body .main .block__logo .logos__item {
+      display: block; }
+    body .main .block__logo #side_topleft {
+      border-radius: 12px 0px 0px 0px; }
+    body .main .block__logo #side_topright {
+      border-radius: 0px 12px 0px 0px; }
+    body .main .block__logo #side_bottomleft {
+      border-radius: 0px 0px 0px 12px; }
+    body .main .block__logo #side_bottomright {
+      border-radius: 0px 0px 12px 0px; }
 
 /*# sourceMappingURL=main.css.map */
