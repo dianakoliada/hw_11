@@ -34,7 +34,6 @@ body {
                     .imgs {
                     overflow: hidden; /*если какая то картинка больше размером, мы ее обрезаем или скрываем*/
                     margin: 0 auto;
-
                     }
                 }
 
@@ -87,27 +86,75 @@ body {
 
         .block__logo {
             outline: 2px solid blue;
-            @include setLogoStyle ($primarySize +2,  $Size *91, 0 auto, flex, wrap);
-            
-            .logos__item {
-                display: block;
+            @include setLogoStyle ($primarySize +2,  $Size *94, 0 auto, flex, wrap);
+
+            .logo__a,
+            .logo__b,
+            .logo__c,
+            .logo__d,
+            .logo__e,
+            .logo__f,
+            .logo__g,
+            .logo__h,
+            .logo__i,
+            .logo__j,
+            .logo__k,
+            .logo__l {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 25%; /*447px*/
+                height: 120px; 
+                position: relative;
+
+                .logo__item {
+                    position: absolute;
+                    top: 30%;
+                    left: 30%;
+                }
             }
 
-            #side_topleft {
+            .logo__a {
+                background-color: #1C4280;
                 border-radius: 12px 0px 0px 0px;
             }
-            
-            #side_topright {
+            .logo__b {
+                background-color: #143646;
+            }
+            .logo__c {
+                background-color: #F48B30;
+            }
+            .logo__d {
+                background-color: #9E4DC3;
                 border-radius: 0px 12px 0px 0px;
             }
-            
-            #side_bottomleft {
+            .logo__e {
+                background-color: #FD9339;
+            }
+            .logo__f {
+                background-color: #E2E2E4;
+            }
+            .logo__g {
+                background-color: #C71C36;
+            }
+            .logo__h {
+                background-color: #DCF3F9;
+            }
+            .logo__i {
+                background-color: #EAEAEA;
                 border-radius: 0px 0px 0px 12px;
             }
-            
-            #side_bottomright {
+            .logo__j {
+                background-color: #282240;
+            }
+            .logo__k {
+                background-color: #1D4568;
+            }
+            .logo__l {
+                background-color: #000000;
                 border-radius: 0px 0px 12px 0px;
-            } 
+            }
+            
         }
     }
 }

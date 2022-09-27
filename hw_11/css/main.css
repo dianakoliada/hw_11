@@ -234,6 +234,27 @@ header {
             line-height: 1.62rem; }
 
 /*1920*/
+.footer {
+  background-color: #F5F5FA;
+  margin-top: 2.5%;
+  display: flex;
+  justify-content: center; }
+  .footer .footer__wrap {
+    outline: 2px solid black;
+    width: 90%;
+    display: flex;
+    flex-direction: column; }
+    .footer .footer__wrap .footer__icon {
+      padding: 2% 0 1%; }
+    .footer .footer__wrap .footer__name {
+      background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+      font-size: 2.35rem;
+      line-height: 36px; }
+
+/*1920*/
 body {
   font-family: 'Montserrat', sans-serif; }
   body .main .block {
@@ -297,19 +318,71 @@ body {
   body .main .block__logo {
     outline: 2px solid blue;
     border-radius: 12px;
-    width: 91%;
+    width: 94%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap; }
-    body .main .block__logo .logos__item {
-      display: block; }
-    body .main .block__logo #side_topleft {
+    body .main .block__logo .logo__a,
+    body .main .block__logo .logo__b,
+    body .main .block__logo .logo__c,
+    body .main .block__logo .logo__d,
+    body .main .block__logo .logo__e,
+    body .main .block__logo .logo__f,
+    body .main .block__logo .logo__g,
+    body .main .block__logo .logo__h,
+    body .main .block__logo .logo__i,
+    body .main .block__logo .logo__j,
+    body .main .block__logo .logo__k,
+    body .main .block__logo .logo__l {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 25%;
+      /*447px*/
+      height: 120px;
+      position: relative; }
+      body .main .block__logo .logo__a .logo__item,
+      body .main .block__logo .logo__b .logo__item,
+      body .main .block__logo .logo__c .logo__item,
+      body .main .block__logo .logo__d .logo__item,
+      body .main .block__logo .logo__e .logo__item,
+      body .main .block__logo .logo__f .logo__item,
+      body .main .block__logo .logo__g .logo__item,
+      body .main .block__logo .logo__h .logo__item,
+      body .main .block__logo .logo__i .logo__item,
+      body .main .block__logo .logo__j .logo__item,
+      body .main .block__logo .logo__k .logo__item,
+      body .main .block__logo .logo__l .logo__item {
+        position: absolute;
+        top: 30%;
+        left: 30%; }
+    body .main .block__logo .logo__a {
+      background-color: #1C4280;
       border-radius: 12px 0px 0px 0px; }
-    body .main .block__logo #side_topright {
+    body .main .block__logo .logo__b {
+      background-color: #143646; }
+    body .main .block__logo .logo__c {
+      background-color: #F48B30; }
+    body .main .block__logo .logo__d {
+      background-color: #9E4DC3;
       border-radius: 0px 12px 0px 0px; }
-    body .main .block__logo #side_bottomleft {
+    body .main .block__logo .logo__e {
+      background-color: #FD9339; }
+    body .main .block__logo .logo__f {
+      background-color: #E2E2E4; }
+    body .main .block__logo .logo__g {
+      background-color: #C71C36; }
+    body .main .block__logo .logo__h {
+      background-color: #DCF3F9; }
+    body .main .block__logo .logo__i {
+      background-color: #EAEAEA;
       border-radius: 0px 0px 0px 12px; }
-    body .main .block__logo #side_bottomright {
+    body .main .block__logo .logo__j {
+      background-color: #282240; }
+    body .main .block__logo .logo__k {
+      background-color: #1D4568; }
+    body .main .block__logo .logo__l {
+      background-color: #000000;
       border-radius: 0px 0px 12px 0px; }
 
 /*# sourceMappingURL=main.css.map */
