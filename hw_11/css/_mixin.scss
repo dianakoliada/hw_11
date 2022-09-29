@@ -37,3 +37,10 @@
     display: $dispFl;
     flex-wrap: $flWrp;
 }
+
+@mixin decorateDot ($bg, $wdth, $hght, $bordRad) {
+    background: $bg;
+    width: $wdth;
+    height: $hght;
+    border-radius: $bordRad;
+}

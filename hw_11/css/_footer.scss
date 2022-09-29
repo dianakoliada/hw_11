@@ -1,101 +1,150 @@
 @import "mixin";
+@import "variables";
 
 $primarySize: 10px;
 $Size: 1%;
 $mainSize: 1rem;
-$color: #B3B3BA;
-$footerMainColor: #F5F5FA;
-$mainColor: #24A3FF;
 
 /*1920*/
 .footer {
     background-color: $footerMainColor;
-    margin-top: 2.5%;
-    display: flex;
-    justify-content: center;
+    margin-top: $Size *2.5;
+    @include setPosition (flex, row, center, baseline);
     
-
     .footer__wrap {
         outline: 2px solid black;
-        width: 90%;
+        width: $Size *90;
         display: flex;
         flex-direction: column;
         
         .footer__icon {
-            padding: 2% 0 1%;
+            padding: $Size*2 0 $Size*1;
         }
 
         .footer__name {
             background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            font-size: $mainSize +1.35;
-            line-height: $primarySize +26;
+            @include decorateTitle (bold, $mainSize +1.35, normal, $primarySize +26);
             padding-bottom: 2%;
         }
 
         .footer__block {
-            display: flex;
-            justify-content: space-between;
+            @include setPosition (flex, row, space-between, baseline);
 
             .footer__block--primary,
             .footer__block--secondary,
             .footer__block--additional {
-                width: 31%;
+                width: $Size *31;
                 background-color: #FFFFFF;
-                border-radius: 8px 8px 8px 8px;
-
-
+                border-radius: $primarySize - 2;
 
                 .footer__img{
 
                     .footer__pic {
-                        border-radius: 8px 8px 0px 0px;
-                        width: 100%;
+                        border-radius: 8px 8px 0 0;
+                        width: $Size *100;
                     }
                 }
 
                     .footer__title {
-                        font-weight: bold;
-                        font-size: $mainSize;
-                        line-height: $primarySize +10;
+                        @include decorateTitle (bold, $mainSize, normal, $primarySize +10);
                         color: $mainColor;
-                        padding: 3% 6% 2% 6%;
+                        padding: $Size*3 $Size *6 $Size *2  $Size *6;
 
                     }
 
                     .footer__date {
                         color: $color;
-                        font-weight: bold;
-                        font-size: $mainSize - 0.25;
-                        line-height: $primarySize +5;
-                        letter-spacing: $primarySize - 9;
+                        @include decorateTitle (bold, $mainSize - 0.25, $primarySize - 9, $primarySize +5);
                         text-transform: uppercase;
-                        padding-left: 6%;
+                        padding-left: $Size *6;
                     }
 
                     .footer__line {
                         display: block;
-                        padding-left: 6%;
+                        padding-left: $Size *6;
                     }
 
                     .footer__text {
-                        font-size: $mainSize - 0.13;
-                        line-height: $primarySize +12;
-                        padding: 3% 6% 3.5% 6%;
-                        color: #000000;
+                        @include decorateTitle (normal, $mainSize - 0.13, normal, $primarySize +12);
+                        padding: $Size *3 $Size *6 $Size *3.5 $Size *6;
                     }
             }
         }
 
         hr {
             display: block;
-            height: 2px;
-            width: 100%;
-            background-color: #E6E6F0;
+            height: $primarySize - 8;
+            width: $Size *100;
+            background-color: $lineColor;
             opacity: 0.5;
-            margin-top: 2%;
+            margin-top: $Size *1.7;
+        }
+
+        .footer__bottom {
+            .footer__nav {
+                @include setPosition (flex, row, space-between, baseline);
+                margin-top: $Size *2;
+                
+                .nav__contacts {
+                    outline: 2px solid black;
+                    width: $Size *30;
+
+                    .nav__contacts--flex {
+                        @include setPosition (flex, row, baseline, center);
+                        outline: 2px solid rgb(175, 9, 9);
+                        
+                        
+                        .nav__title {
+                            color: $additionalColor;
+                            @include decorateTitle (normal, $mainSize, normal, $primarySize +10);
+                            padding-right: $Size *1.5;
+                        }
+
+                        .dot__separator {
+                            @include decorateDot ($color, $primarySize - 4, $primarySize - 4, $Size *50);
+                        }
+
+                        .nav__title--separate {
+                            padding-left: $Size *1.5;
+                            color: $mainColor;
+                            @include decorateTitle (bold, $mainSize - 0.25, $primarySize - 9, $primarySize +5);
+                            text-transform: uppercase;
+                        }
+                    }
+
+                    .nav__contacts--secondary {
+                        @include setPosition (flex, row, baseline, center);
+                        padding: $Size *3 $Size *3 $Size *3 0;
+
+                        .footer__pic {
+                            padding-right: $Size *1.5;
+                        }
+
+                        .dot__separator {
+                            @include decorateDot ($color, $primarySize - 4, $primarySize - 4, $Size *50);
+                        }
+
+                        .nav__title--strong {
+                            color: $darkColor;
+                            @include decorateTitle (bold, $mainSize, normal, $primarySize +10);
+                            padding: 0 $Size *1.5;
+                        }
+
+                        .footer_info {
+                            color: $mainColor;
+                            @include decorateTitle (bold, $mainSize, normal, $primarySize +10);
+                            padding-left: $Size *1.5;
+                        }
+                    }
+                }
+
+                .footer__item {
+                    color: $color;
+                    @include decorateTitle (normal, $mainSize, normal, $primarySize +10);
+                }
+            }
         }
     }
 }

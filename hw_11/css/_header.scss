@@ -1,5 +1,5 @@
 @import "mixin";
-$headerMainColor: White;
+@import "variables";
 
 /*1920*/
 header {
@@ -81,10 +81,7 @@ header {
                         width: $Size*60;
 
                         .dot__separator {
-                            width: $primarySize - 4;
-                            height: $primarySize - 4;
-                            border-radius: $Size*50;
-                            background-color: #E6E6F0;
+                            @include decorateDot ($lineColor, $primarySize - 4, $primarySize - 4, $Size *50);
                         }
 
                         .nav__title {
